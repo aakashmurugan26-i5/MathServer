@@ -1,0 +1,41 @@
+<html>
+  <head>
+    <title>CALCULATIONS</title>
+  </head>
+  <body>
+    <center>
+      <h1>AAKASH M (26001770)</h1>
+      <h1>Cumulative Churn Rate</h1>
+      <form method="POST">
+        {% csrf_token %}
+        <label>
+          Initial Customers Count :
+          <input
+            type="number"
+            value="{{ Initial_Customers_Count }}"
+            name="InitCust"
+          />
+        </label>
+        <br />
+        <br />
+        <label>
+          Customers Lost Count :
+          <input
+            type="number"
+            value="{{ Customers_Lost_Count }}"
+            name="CustLost"
+          />
+        </label>
+        <br />
+        <br />
+        <input type="submit" value="Calculate" />
+        <br />
+        <br />
+        <label>
+          Cumulative Churn Rate :
+          <input type="number" value="{{ area }}" readonly />
+        </label>
+      </form>
+    </center>
+  </body>
+</html>
